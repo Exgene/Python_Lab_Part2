@@ -9,6 +9,7 @@ with open('marks.txt', 'r') as file:
     for line in file:
         student_answers.append(line.strip().split(' '))#similarly each line has each students info and asnwers so storing in a list format
 
+file.close()
 
 # calculate score for each student
 scores = []
