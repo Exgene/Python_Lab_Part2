@@ -19,9 +19,9 @@ for i in range(num):
     for j in student_list[i]:
         sum=sum+int(j)
         
-    print(f"Student[i] Sum:{sum}")
+    print(f"Student[{i}] Sum:{sum}")
     avg=float(sum/6)
-    print(f"Student[i] Average:{avg}")
+    print(f"Student[{i}] Average:{avg}")
     student_marks.append(sum)
     student_marks.append(avg)
     student_marks.append("*")#* represents end of student
