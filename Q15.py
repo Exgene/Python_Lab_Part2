@@ -17,10 +17,10 @@ def MaxMinArea(rect):
     min=rect[0]
 
     for i in rect:
-        if i.getArea>max.getArea:
+        if i.getArea()>max.getArea():
             max=i
         
-        if i.getArea<min.getArea:
+        if i.getArea()<min.getArea():
             min=i
     
     return max,min
@@ -37,6 +37,8 @@ for i in range(n):
 
 maxArea,minArea=MaxMinArea(rect)
 
-maxArea.printFn
-minArea.printFn
+print("Max Area Rectangle:")
+maxArea.printFn()
+print("Min Area Rectangle:")
+minArea.printFn()
 
