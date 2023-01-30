@@ -17,6 +17,9 @@ class Account:
     
     def getBalance(self):
         return self.__balance
+    
+    def PrintBal(self):
+        print("Bal:",self.__balance)
 
 list=[]
     
@@ -29,22 +32,22 @@ def NewAccount(accNo):
 
 def Process(num , op , amt):
     for i in list:
-        if i.getAccNumber()==op:
+        if i.getAccNumber()==num:
             if op=="deposit":
                 i.deposit(amt)
             elif op=="withdraw":
                 i.withdraw(amt)
             elif op=="balance":
-                print("Balance:",i.getBalance())
-        return
-    print("Acc Number Not Found!")
+                i.PrintBalance()
+        else:
+            print("Acc Number Not Found!")
 
 def MaxAccBal(num):
     maxBal=0
     maxAcc=None
     for i in list:
         if i.getBalance()>maxBal:
-            maxBal=i.getBalance
+            maxBal=i.getBalance()
             maxAcc=i
     print(f"Max Balance of the Acc No :{maxAcc.getAccNumber()} is {maxBal}")
 
@@ -68,7 +71,7 @@ def main():
         elif x==4:
             MaxAccBal(accNo)
         elif x==5:
-            exit()
+            exit(0)
         else:
             print("Invalid Input!")
 

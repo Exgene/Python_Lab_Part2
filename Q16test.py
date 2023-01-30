@@ -43,7 +43,7 @@ def process(num, operation, amount):
                 i.deposit(amount)
             elif operation == "display":
                 i.display()
-            return
+        return
     print("Error: Account", num, "not found")
 
 
