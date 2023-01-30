@@ -1,6 +1,6 @@
 index=0
 count=0
-word=input("Enter a word")
+word=input("Enter a word:")
 for i in word:
     if i.isupper():
         print("Letter:"+ i)
